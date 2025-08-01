@@ -1,0 +1,21 @@
+name: Basic CI for Unity Physio Rehab
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  check-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: List project files
+        run: ls -la
+
+      - name: CI Test Complete
+        run: echo "CI pipeline ran successfully!"
