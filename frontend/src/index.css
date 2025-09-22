@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+html, body, #root {
+  @apply h-full;
+}
+
+body {
+  @apply antialiased bg-gray-50 text-gray-900;
+}
+
+@layer components {
+  .container-page { @apply mx-auto max-w-6xl px-4 sm:px-6; }
+  .card { @apply bg-white border rounded-lg shadow-sm; }
+  .card-body { @apply p-4 sm:p-6; }
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors; }
+  .btn-primary { @apply text-white; background:#1599de; }
+  .btn-primary:hover { filter: brightness(0.95); }
+  .btn-accent { @apply text-white; background:#5ea132; }
+  .btn-accent:hover { filter: brightness(0.95); }
+  .btn-outline-primary { @apply border text-[#1599de] border-[#1599de]; }
+  .btn-outline-primary:hover { @apply bg-[#1599de] text-white; }
+  .input { @apply w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1599de]; }
+  .section-title { @apply text-2xl font-semibold mb-4; }
+}
